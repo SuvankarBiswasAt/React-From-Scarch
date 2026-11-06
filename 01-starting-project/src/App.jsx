@@ -5,7 +5,7 @@ import TabComponent from "./component/TabComponent.jsx";
 import { useState } from "react";
 
 function App() {
-  var [selewctedTopic, setSelectedTopic] = useState('components');
+  var [selectedTopic, setSelectedTopic] = useState('components');
 
   function handleSelect(element) {
     setSelectedTopic(element);
@@ -13,7 +13,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -65,7 +65,7 @@ function App() {
           )}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
