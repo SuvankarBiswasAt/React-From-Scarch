@@ -1,7 +1,7 @@
-export default function TabComponent({children, onSelect, selected}) {
+export default function TabComponent({children, selected, ...props}) {
   return (
     <li>
-      <button className={selected ? 'active' : undefined} onClick={onSelect}>{children}</button>
+      <button className={selected ? 'active' : undefined} {...props}>{children}</button>
     </li>
   );
 }
