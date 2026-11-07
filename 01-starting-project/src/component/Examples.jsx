@@ -27,7 +27,7 @@ export default function Examples() {
              </TabComponent>
             )
           })
-        }
+        } ButtonsContainer={Section}
       >
         {!selectedTopic ? (
           <p>Please select a topic</p>
