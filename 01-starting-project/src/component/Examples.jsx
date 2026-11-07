@@ -12,36 +12,21 @@ export default function Examples() {
     console.log(selectedTopic);
   }
 
+  var options = ['components','jsx','props','state']
+
   return (
     <Section title="Example" id="examples">
       <Tabs
         buttons={
-          <>
-            <TabComponent
-              selected={selectedTopic === "components"}
-              onClick={() => handleSelect("components")}
-            >
-              Component
-            </TabComponent>
-            <TabComponent
-              selected={selectedTopic === "jsx"}
-              onClick={() => handleSelect("jsx")}
-            >
-              JSX
-            </TabComponent>
-            <TabComponent
-              selected={selectedTopic === "props"}
-              onClick={() => handleSelect("props")}
-            >
-              Props
-            </TabComponent>
-            <TabComponent
-              selected={selectedTopic === "state"}
-              onClick={() => handleSelect("state")}
-            >
-              State
-            </TabComponent>
-          </>
+          options.map(ele => {
+            return (
+              <TabComponent 
+              selected={selectedTopic === ele}
+               onClick={() => handleSelect(ele)}>
+               {ele.toUpperCase()}
+             </TabComponent>
+            )
+          })
         }
       >
         {!selectedTopic ? (
